@@ -19,7 +19,6 @@ def convert_to_ascii(string):
         u"ṛ": "rh",
         u"ṝ": "Rh",
         u"ḻa": "zh",
-        u"ḷ": "Lh",
         u"l̥̄": "LH",
         u"ā": "A",
         u"ī": "I",
