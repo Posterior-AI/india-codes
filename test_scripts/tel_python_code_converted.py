@@ -1,38 +1,38 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-చెల్లు = 5
-సందర్భం = True
-if సందర్భం:
-    print("చెల్లు:", చెల్లు)
-    print("సందర్భం:", సందర్భం)
+cellu = 5
+saMdarbhaM = True
+if saMdarbhaM:
+    print("cellu:", cellu)
+    print("saMdarbhaM:", saMdarbhaM)
 else:
-    print("అబద్ధం: తప్పు")
+    print("abaddhaM: tappu")
 
 
-సంఖ్యలు = [1, 2, 3, 4, 5]
-మొత్తం = 0
-for సంఖ్య in సంఖ్యలు:
-    మొత్తం += సంఖ్య
+saMkhyalu = [1, 2, 3, 4, 5]
+mottaM = 0
+for saMkhya in saMkhyalu:
+    mottaM += saMkhya
 
-print("సంఖ్యల మొత్తం:", మొత్తం)
-
-
-కౌంట్ = 10
-for సంఖ్య in range(కౌంట్):
-    print(కౌంట్)
-    కౌంట్ += 1
+print("saMkhyala mottaM:", mottaM)
 
 
-class నాclass:
-    సందేశం = "ఇది ఒక వర్గం"
-    def print_సందేశం(సందేశం):
-        print(సందేశం)
+kauMT = 10
+for saMkhya in range(kauMT):
+    print(kauMT)
+    kauMT += 1
 
 
-పథం = "/వర్గం/ఉదాహరణ/పథం/ఫైల్.టెక్స్ట్"
+class nAclass:
+    saMdESaM = "idi oka vargaM"
+    def print_saMdESaM(saMdESaM):
+        print(saMdESaM)
+
+
+pathaM = "/vargaM/udAharaNa/pathaM/phail.TeksT"
 try:
-    with open(పథం) as ఫైల్:
+    with open(pathaM) as phail:
         pass
 except:
-    print("ఫైల్ కనుగొనబడలేదు")
+    print("phail kanugonabaDalEdu")

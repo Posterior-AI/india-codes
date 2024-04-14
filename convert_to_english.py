@@ -1,9 +1,10 @@
 from dictionaries import python_
 import re
 import argparse
+from transliterate import transliterate
 
 
-def translate_code_one2one(code, dict_):
+def translate_code_one2one(code, dict_, transliterate_flag=False, lang=None):
     # Extract code within single and double quotes
     quoted_code = re.findall(r"'(.*?)'|\"(.*?)\"", code)
 
@@ -21,12 +22,15 @@ def translate_code_one2one(code, dict_):
         translated_code = translated_code.replace(
             "{}", '"' + quote + quoted_text + quote + '"', 1)
 
+    if transliterate_flag:
+        translated_code = transliterate.transliterate(translated_code, lang)
+
     return translated_code
 
 
-def translate_script(script_path, eng2tel):
+def translate_script(script_path, eng2tel, transliterate=False, lang=None):
     code = open(script_path, "r").read()
-    return translate_code_one2one(code, eng2tel)
+    return translate_code_one2one(code, eng2tel, transliterate, lang)
 
 
 if __name__ == "__main__":
@@ -38,6 +42,8 @@ if __name__ == "__main__":
                         help='The Programming Language to convert')
     parser.add_argument('--lang', type=str,
                         help='The Natural Language to convert it into')
+    parser.add_argument('--transliterate', action='store_true', default=False,
+                        help='Transliterate identifiers to English')
     parser.add_argument('--out_file', type=str, default="converted_code", required=False,
                         help='Output file')
 
@@ -52,4 +58,5 @@ if __name__ == "__main__":
     # print(dict_)
 
     with open(args.out_file, "w") as f:
-        f.write(translate_script(args.script_file, dict_))
+        f.write(translate_script(args.script_file,
+                dict_, args.transliterate, args.lang))

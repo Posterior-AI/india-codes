@@ -1,36 +1,36 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-संवेदनशीलता = 5
-शर्त = True
-if शर्त:
-    print("संवेदनशीलता:", संवेदनशीलता)
-    print("शर्त:", शर्त)
+saMvedanaSIlatA = 5
+Sarta = True
+if Sarta:
+    print("saMvedanaSIlatA:", saMvedanaSIlatA)
+    print("Sarta:", Sarta)
 else:
-    print("असत्य: सही")
+    print("asatya: sahI")
 
-संख्orएँ = [1, 2, 3, 4, 5]
-कुल = 0
-for ऐ in संख्orएँ:
-    कुल += ऐ
-    print("संख्याओं का योग:", कुल)
+saMkhoreNh = [1, 2, 3, 4, 5]
+sum = 0
+for ai in saMkhoreNh:
+    sum += ai
+    print("saMkhyAoM kA yoga:", sum)
 
-गणना = 10
-for ऐ in range(गणना):
-    print(ऐ)
-    गणना += 1
-
-
-class मेरी_कक्षा:
-    संदेश = "यह एक कक्षा है"
-
-    def print_संदेश(self):
-        print(self.संदेश)
+gaNanA = 10
+for ai in range(gaNanA):
+    print(ai)
+    gaNanA += 1
 
 
-पथ = "/कक्षा/उदाहरण/पथ/फ़ाइल.टेक्स्ट"
+class merI_kakshA:
+    saMdeSa = "yaha eka kakshA hai"
+
+    def print_saMdeSa(self):
+        print(self.saMdeSa)
+
+
+patha = "/kakshA/udAharaNa/patha/fAila.TeksTa"
 try:
-    with open(पथ) as फ़ाइल:
+    with open(patha) as fAila:
         pass
 except:
-    print("फ़ाइल नहीं मिली")
+    print("fAila nahIM milI")
