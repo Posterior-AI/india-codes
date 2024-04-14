@@ -31,18 +31,15 @@ cd india-codes
 
 Every language has their own set of keywords. All (major) programming languages have these keywords in English. Some programming languages (Python, Javascript, Rust) support unicode, and some (C, C++) don't. 
 
-### Version 1 (Currently):
+### Version 1 :
  - User writes the entire code in their native language.
  - The language supports unicode identifiers.
  - One-to-one mapping for English keywords with native language keywords.
  - The programming language keywords from the user code will be replaced to actual English keywords.
+ - IF specified: After replacing the keywords, all identifiers will also be transliterated to English. This will effectively support all languages. Even the languages which don't support unicode identifiers.
  - This is executable code.
 
-### Version 1.2 (Next):
- - Everything from A.
- - After replacing the keywords, all identifiers will also be transliterated to English. This will effectively support all languages. Even the languages which don't support unicode identifiers.
-
-## Version C (Later):
+## Version 2 (Next):
  - Using Abstract Syntax Trees to make the syntax more sensible in native languages.
 
 ## Usage
@@ -54,12 +51,13 @@ Every language has their own set of keywords. All (major) programming languages 
 ```
 bash
 
-python convert_to_english.py --script <script_file> --lang <programming_language> --target <target_language> --output <output_file>
+python convert_to_english.py --script <script_file> --lang <programming_language> --target <target_language> --output <output_file> --transliterate
 
 - `<script_file>`: Path to the script file you want to translate
 - `<programming_language>`: Programming language of the script file (e.g., python). All small letters.
 - `<target_language>`: Target natural language for the translation (e.g., Telugu). First letter Capital.
 - `<output_file>`: Path to the output file where the translated code will be written
+- `<transliterate>`: If specified, all native language code will be transliterated to ASCII supported format.
 ```
 
 For example, to translate a Python script from English to Telugu:
@@ -103,14 +101,14 @@ Python code in Telugu.
 
 वर्ग मेरी_कक्षा:
     संदेश = "यह एक कक्षा है"
-    निर्धारित मुद्र_संदेश(self):
+    परिभाषा मुद्र_संदेश(self):
         मुद्र(self.संदेश)
 
 
 पथ = "/कक्षा/उदाहरण/पथ/फ़ाइल.टेक्स्ट"
 प्रयास:
     साथ खोलें(पथ) जैसा फ़ाइल:
-        चलो
+        चले
 अपवाद:
     मुद्र("फ़ाइल नहीं मिली")
 
